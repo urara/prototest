@@ -1,0 +1,137 @@
+<h1>Listing screens</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Discription</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @screens.each do |screen| %>
+  <tr>
+    <td><%= screen.name %></td>
+    <td><%= screen.discription %></td>
+    <td><%= link_to 'Show', screen %></td>
+    <td><%= link_to 'Edit', edit_screen_path(screen) %></td>
+    <td><%= link_to 'Destroy', screen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Screen', new_screen_path %>
+
+v class="nicetable">
+            <div class="row-fluid dividingbox dividingbox-jointed">
+		                  <div class="span8">
+					                  <ul class="nav nav-pills">
+								                    <li class="active"><a href="#">すべて</a></li>
+										                      <li><a href="#">下書き</a></li>
+												                        <li><a href="#">申請中・審査中</a></li>
+															                  <li><a href="#">差戻し</a></li>
+																	                    <li><a href="#">承認済み</a></li>
+																			                    </ul>
+																					                  </div><!-- /span8 -->
+																							        
+																							                <div class="span4">
+																										                <p class="alignRight"><small><a href="javascript: void(0);">さらに絞り込む…</a></small></p>
+																												              </div><!-- /span4 -->
+																													                  </div>
+																															        
+																															              <div class="row-fluid">
+																																	                    <div class="span4">
+																																				                    <p class="tableResultStat additional"><strong>118</strong> 件中 1 - 20</p>
+																																						                  </div><!-- /span4 -->
+																																								                <div class="span8">
+																																											                <div class="pagination pagination-right">
+																																														                <ul>
+																																																	                  <li class="disabled"><a href="#">«</a></li>
+																																																			                    <li class="active"><a href="#">1</a></li>
+																																																					                      <li><a href="#">2</a></li>
+																																																							                        <li><a href="#">3</a></li>
+																																																										                 <li><a href="#">4</a></li>
+																																																												                  <li><a href="#">5</a></li>
+																																																														                   <li><a href="#">6</a></li>
+																																																																                    <li><a href="#">»</a></li>
+																																																																		                   </ul>
+																																																																				                 </div><!-- pagination -->
+																																																																						               </div><!-- /span8 -->
+																																																																							                   </div>
+																																																																									         
+																																																																									               <table class="table table-striped table-condensed table-bordered">
+																																																																											                   <thead>
+																																																																														                 <tr>
+																																																																																	                 <th style="width: 180px;">申請伝票No. / 申請日</th>
+																																																																																			                 <th style="width: 150px;">状況</th>
+																																																																																					                 <th>行先</th>
+																																																																																							                 <th style="width: 100px;">合計金額</th>
+																																																																																									                 <th style="width: 150px;"></th>
+																																																																																											               </tr>
+																																																																																												                   </thead>
+																																																																																														               <tbody>
+																																																																																																                     <tr>
+																																																																																																			                     <td class="vertMiddle"><b><a href="#">LIKGK0-000051586</a></b><p class="additional">2012/07/31</p></td>
+																																																																																																					                     <td class="vertMiddle">申請中<br><i class="icon-warning-sign"></i> <a href="javascript:void(0);"><small>証憑の届出が必要です</small></a></td>
+																																																																																																							                     <td class="vertMiddle">ABC社(12/07/01), DEF社(12/07/08)</td>
+																																																																																																									                     <td class="vertMiddle alignRight">1,210 <span class="additional">円</span></td>
+																																																																																																											                     <td class="vertMiddle alignCenter">
+																																																																																																														                       <div class="btn-group">
+																																																																																																																	                             <button class="btn btn-primary">複製して申請</button>
+																																																																																																																				                           <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+																																																																																																																							                         <ul class="dropdown-menu">
+																																																																																																																											                         <li><a href="#">詳細</a></li>
+																																																																																																																														                         <li><a href="#">証憑添付用紙をダウンロード</a></li>
+																																																																																																																																	                         <li class="divider"></li>
+																																																																																																																																				                         <li class="text-critical"><a href="#">削除</a></li>
+																																																																																																																																							                       </ul>
+																																																																																																																																									                           </div><!-- スプリットボタン -->
+																																																																																																																																												                   </td>
+																																																																																																																																														                 </tr>
+																																																																																																																																																               
+																																																																																																																																																               <tr>
+																																																																																																																																																		                       <td class="vertMiddle"><b><a href="#">LIKGK0-000051586</a></b><p class="additional">2012/07/31</p></td>
+																																																																																																																																																				                       <td class="vertMiddle">下書き</td>
+																																																																																																																																																						                       <td class="vertMiddle">ABC社(12/07/01), DEF社(12/07/08)</td>
+																																																																																																																																																								                       <td class="vertMiddle alignRight">1,210 <span class="additional">円</span></td>
+																																																																																																																																																										                       <td class="vertMiddle alignCenter">
+																																																																																																																																																													                         <div class="btn-group">
+																																																																																																																																																																	                       <button class="btn btn-primary">複製して申請</button>
+																																																																																																																																																																			                             <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+																																																																																																																																																																						                           <ul class="dropdown-menu">
+																																																																																																																																																																										                           <li><a href="#">詳細</a></li>
+																																																																																																																																																																													                           <li><a href="#">編集</a></li>
+																																																																																																																																																																																                           <li class="divider"></li>
+																																																																																																																																																																																			                           <li class="text-critical"><a href="#">削除</a></li>
+																																																																																																																																																																																						                         </ul>
+																																																																																																																																																																																									                     </div><!-- スプリットボタン -->
+																																																																																																																																																																																											                     </td>
+																																																																																																																																																																																													                   </tr>
+																																																																																																																																																																																															                 
+																																																																																																																																																																																															               </tbody>
+																																																																																																																																																																																																                   </table>
+																																																																																																																																																																																																		               
+																																																																																																																																																																																																		               <div class="row-fluid">
+																																																																																																																																																																																																				                     <div class="span4">
+																																																																																																																																																																																																							                     <p class="tableResultStat additional"><strong>118</strong> 件中 1 - 20</p>
+																																																																																																																																																																																																									                   </div><!-- /span4 -->
+																																																																																																																																																																																																											                 <div class="span8">
+																																																																																																																																																																																																														                 <div class="pagination pagination-right">
+																																																																																																																																																																																																																	                 <ul>
+																																																																																																																																																																																																																				                   <li class="disabled"><a href="#">«</a></li>
+																																																																																																																																																																																																																						                     <li class="active"><a href="#">1</a></li>
+																																																																																																																																																																																																																								                       <li><a href="#">2</a></li>
+																																																																																																																																																																																																																										                         <li><a href="#">3</a></li>
+																																																																																																																																																																																																																													                  <li><a href="#">4</a></li>
+																																																																																																																																																																																																																															                   <li><a href="#">5</a></li>
+																																																																																																																																																																																																																																	                    <li><a href="#">6</a></li>
+																																																																																																																																																																																																																																			                     <li><a href="#">»</a></li>
+																																																																																																																																																																																																																																					                    </ul>
+																																																																																																																																																																																																																																							                  </div><!-- pagination -->
+																																																																																																																																																																																																																																									                </div><!-- /span8 -->
+																																																																																																																																																																																																																																											            </div>
+																																																																																																																																																																																																																																												          
+																																																																																																																																																																																																																																												          </div>
+
